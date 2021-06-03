@@ -49,7 +49,7 @@
         },
         {
           "name": "esGoalState",
-          "label": "Governance control, Platform Managment & Security",
+          "label": "Governance control & Platform Managment",
           "subLabel": {
             "preValidation": "",
             "postValidation": ""
