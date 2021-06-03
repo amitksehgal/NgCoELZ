@@ -1,0 +1,231 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "enterpriseScaleCompanyPrefix": {
+      "value": ""
+    },
+    "managementSubscriptionId": {
+      "value": ""
+    },
+    "connectivitySubscriptionId": {
+      "value": ""
+    },
+    "identitySubscriptionId": {
+      "value": ""
+    },
+    "denySubnetWithoutNsgForIdentity": {
+      "value": "No"
+    },
+    "denyRdpForIdentity": {
+      "value": "No"
+    },
+    "denyPipForIdentity": {
+      "value": "No"
+    },
+    "enableVmBackupForIdentity": {
+      "value": "No"
+    },
+    "nonCorpLzSubscriptionId": {
+      "value": []
+    },
+    "corpLzSubscriptionId": {
+      "value": []
+    },
+    "corpConnectedLzSubscriptionId": {
+      "value": []
+    },
+    "enableLogAnalytics": {
+      "value": "No"
+    },
+    "retentionInDays": {
+      "value": ""
+    },
+    "enableAsc": {
+      "value": "No"
+    },
+    "enableAksPolicy": {
+      "value": "No"
+    },
+    "emailContactAsc": {
+      "value": ""
+    },
+    "enableAscForServers": {
+      "value": "Free"
+    },
+    "enableAscForAppServices": {
+      "value": "Free"
+    },
+    "enableAscForStorage": {
+      "value": "Free"
+    },
+    "enableAscForSql": {
+      "value": "Free"
+    },
+    "enableAscForSqlOnVm": {
+      "value": "Free"
+    },
+    "enableAscForKeyVault": {
+      "value": "Free"
+    },
+    "enableAscForArm": {
+      "value": "Free"
+    },
+    "enableAscForDns": {
+      "value": "Free"
+    },
+    "enableAscForKubernetes": {
+      "value": "Free"
+    },
+    "enableAscForRegistries": {
+      "value": "Free"
+    },
+    "denyAksPrivileged": {
+      "value": "No"
+    },
+    "denyAksPrivilegedEscalation": {
+      "value": "No"
+    },
+    "denyHttpIngressForAks": {
+      "value": "No"
+    },
+    "enableArcMonitoring": {
+      "value": "No"
+    },
+    "enableVmMonitoring": {
+      "value": "No"
+    },
+    "enableVmssMonitoring": {
+      "value": "No"
+    },
+    "enableSecuritySolution": {
+      "value": "No"
+    },
+    "enableEncryptionInTransit": {
+      "value": "No"
+    },
+    "enableAgentHealth": {
+      "value": "No"
+    },
+    "enableChangeTracking": {
+      "value": "No"
+    },
+    "enableUpdateMgmt": {
+      "value": "Yes"
+    },
+    "enableActivityLog": {
+      "value": "Yes"
+    },
+    "enableVmInsights": {
+      "value": "Yes"
+    },
+    "enableServiceMap": {
+      "value": "Yes"
+    },
+    "enableSqlAssessment": {
+      "value": "Yes"
+    },
+    "enableSqlAudit": {
+      "value": "No"
+    },
+    "enableSqlEncryption": {
+      "value": "No"
+    },
+    "enableVmBackup": {
+      "value": "No"
+    },
+    "denyRdp": {
+      "value": "No"
+    },
+    "denyPublicEndpoints": {
+      "value": "No"
+    },
+    "enableStorageHttps": {
+      "value": "No"
+    },
+    "enableLzDdoS": {
+      "value": "No"
+    },
+    "denyIpForwarding": {
+      "value": "No"
+    },
+    "denySubnetWithoutNsg": {
+      "value": "No"
+    },
+    "addressPrefix": {
+      "value": ""
+    },
+    "enableVpnGw": {
+      "value": "No"
+    },
+    "enableErGw": {
+      "value": "No"
+    },
+    "location": {
+      "value": ""
+    },
+    "enableHub": {
+      "value": "No"
+    },
+    "enableAzFw": {
+      "value": "No"
+    },
+    "enableAzFwDnsProxy": {
+      "value": "No"
+    },
+    "enableDdoS": {
+      "value": "No"
+    },
+    "subnetMaskForAzFw": {
+      "value": ""
+    },
+    "subnetMaskForGw": {
+      "value": ""
+    },
+    "gwRegionalOrAz": {
+      "value": ""
+    },
+    "gwAzSku": {
+      "value": ""
+    },
+    "gwRegionalSku": {
+      "value": ""
+    },
+    "erRegionalOrAz": {
+      "value": ""
+    },
+    "erAzSku": {
+      "value": ""
+    },
+    "erRegionalSku": {
+      "value": ""
+    },
+    "firewallZones": {
+      "value": []
+    },
+    "paToken": {
+      "value": ""
+    },
+    "principalId": {
+      "value": []
+    },
+    "appId": {
+      "value": ""
+    },
+    "principalSecret": {
+      "value": ""
+    },
+    "gitHubUserNameOrOrg": {
+      "value": ""
+    },
+    "repositoryName": {
+      "value": ""
+    },
+    "enableAzOps": {
+      "value": "No"
+    },
+    "subscriptionId": {
+      "value": ""
+    }
+  }
+}
