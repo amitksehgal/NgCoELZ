@@ -1631,7 +1631,7 @@
       "location": "[steps('esConnectivityGoalState').esNwLocation]",
       "managementSubscriptionId": "[steps('esGoalState').esMgmtSub]",
       "identitySubscriptionId": "[if(or(not(equals(steps('esIdentityGoalState').esIdentitySub, steps('esGoalState').esMgmtSub)), not(equals(steps('esIdentityGoalState').esIdentitySub, steps('esConnectivityGoalState').esConnectivitySub))), steps('esIdentityGoalState').esIdentitySub, '')]",
-      "nonCorpLzSubscriptionId": "[if(or(not(contains(steps('lzGoalState').esOnlineLzSub, steps('esGoalState').esMgmtSub)), not(contains(steps('lzGoalState').esOnlineLzSub, steps('esConnectivityGoalState').esConnectivitySub))), steps('lzGoalState').esOnlineLzSub, '')]",
+      "nonCorpLzSubscriptionId": "[if(or(not(contains(steps('lzGoalState').sectionNonCorpMG.esOnlineLzSub, steps('esGoalState').esMgmtSub)), not(contains(steps('lzGoalState').esOnlineLzSub, steps('esConnectivityGoalState').esConnectivitySub))), steps('lzGoalState').esOnlineLzSub, '')]",
       "corpLzSubscriptionId": "[if(or(not(contains(steps('lzGoalState').esCorpLzSub, steps('esGoalState').esMgmtSub)), not(contains(steps('lzGoalState').esCorpLzSub, steps('esConnectivityGoalState').esConnectivitySub))), steps('lzGoalState').esCorpLzSub, '')]",
       "enableLogAnalytics": "[steps('esGoalState').esLogAnalytics]",
       "denyRdpForIdentity": "[steps('esIdentityGoalState').esIdDenyRdp]",
