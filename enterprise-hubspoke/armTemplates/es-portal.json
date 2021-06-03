@@ -1663,7 +1663,7 @@
         "enableAscForDns": "[steps('esGoalState').security.esAscDns]",
         "enableAscForKubernetes": "[steps('esGoalState').security.esAscKubernetes]",
         "enableAscForRegistries": "[steps('esGoalState').security.esAscRegistries]",
-        "enableSecuritySolution": "[steps('esGoalState').esSecuritySolution]",
+        "enableSecuritySolution": "[steps('esGoalState').security.esSecuritySolution]",
         "enableAgentHealth": "[steps('esGoalState').monitoring.esAgentSolution]",
         "enableChangeTracking": "[steps('esGoalState').monitoring.esChangeTracking]",
         "enableUpdateMgmt": "[steps('esGoalState').monitoring.esUpdateMgmt]",
