@@ -302,10 +302,10 @@
                   "type": "Microsoft.Common.TextBox",
                   "label": "Azure Security Center Email Contact",
                   "toolTip": "Email address to get email notifications from Azure Security Center",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "defaultValue": "",
                   "constraints": {
-                    "required": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                    "required": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                     "regex": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
                     "validationMessage": "Please provide a valid email address"
                   }
@@ -316,7 +316,7 @@
                   "label": "Enable Azure Defender for servers",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for all servers.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -336,7 +336,7 @@
                   "label": "Enable Azure Defender for AppServices",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for AppServices.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -356,7 +356,7 @@
                   "label": "Enable Azure Defender for Storage",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Storage.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -376,7 +376,7 @@
                   "label": "Enable Azure Defender for Azure SQL Database",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Azure SQL Database.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -396,7 +396,7 @@
                   "label": "Enable Azure Defender for SQL servers on machines",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for SQL servers on machines.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -416,7 +416,7 @@
                   "label": "Enable Azure Defender for Key Vault",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Key Vault.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -436,7 +436,7 @@
                   "label": "Enable Azure Defender for Azure Resource Manager",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Resource Manager.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -456,7 +456,7 @@
                   "label": "Enable Azure Defender for DNS",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for DNS.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -476,7 +476,7 @@
                   "label": "Enable Azure Defender for Kubernetes",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Kubernetes.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -496,7 +496,7 @@
                   "label": "Enable Azure Defender for Container registries",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Container registries.",
-                  "visible": "[equals(steps('esGoalState').esAsc, 'Yes')]",
+                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -1651,56 +1651,56 @@
         "denySubnetWithoutNsgForIdentity": "[steps('esIdentityGoalState').esIdDenySubnetNsg]",
         "denyPipForIdentity": "[steps('esIdentityGoalState').esIdDenyPublicIp]",
         "enableVmBackupForIdentity": "[steps('esIdentityGoalState').esIdAzBackup]",
-        "enableAsc": "[steps('esGoalState').esAsc]",
-        "emailContactAsc": "[steps('esGoalState').esAscEmail]",
-        "enableAscForServers": "[steps('esGoalState').esAscVms]",
-        "enableAscForAppServices": "[steps('esGoalState').esAscApps]",
-        "enableAscForStorage": "[steps('esGoalState').esAscStorage]",
-        "enableAscForSql": "[steps('esGoalState').esAscSql]",
-        "enableAscForSqlOnVm": "[steps('esGoalState').esAscSqlOnVm]",
-        "enableAscForKeyVault": "[steps('esGoalState').esAscKeyVault]",
-        "enableAscForArm": "[steps('esGoalState').esAscArm]",
-        "enableAscForDns": "[steps('esGoalState').esAscDns]",
-        "enableAscForKubernetes": "[steps('esGoalState').esAscKubernetes]",
-        "enableAscForRegistries": "[steps('esGoalState').esAscRegistries]",
+        "enableAsc": "[steps('esGoalState').security.esAsc]",
+        "emailContactAsc": "[steps('esGoalState').security.esAscEmail]",
+        "enableAscForServers": "[steps('esGoalState').security.esAscVms]",
+        "enableAscForAppServices": "[steps('esGoalState').security.esAscApps]",
+        "enableAscForStorage": "[steps('esGoalState').security.esAscStorage]",
+        "enableAscForSql": "[steps('esGoalState').security.esAscSql]",
+        "enableAscForSqlOnVm": "[steps('esGoalState').security.esAscSqlOnVm]",
+        "enableAscForKeyVault": "[steps('esGoalState').security.esAscKeyVault]",
+        "enableAscForArm": "[steps('esGoalState').security.esAscArm]",
+        "enableAscForDns": "[steps('esGoalState').security.esAscDns]",
+        "enableAscForKubernetes": "[steps('esGoalState').security.esAscKubernetes]",
+        "enableAscForRegistries": "[steps('esGoalState').security.esAscRegistries]",
         "enableSecuritySolution": "[steps('esGoalState').esSecuritySolution]",
-        "enableAgentHealth": "[steps('esGoalState').esAgentSolution]",
-        "enableChangeTracking": "[steps('esGoalState').esChangeTracking]",
-        "enableUpdateMgmt": "[steps('esGoalState').esUpdateMgmt]",
-        "enableActivityLog": "[steps('esGoalState').esActivityLog]",
-        "enableVmInsights": "[steps('esGoalState').esVmInsights]",
-        "enableServiceMap": "[steps('esGoalState').esServiceMap]",
-        "enableSqlAssessment": "[steps('esGoalState').esSqlAssessment]",
+        "enableAgentHealth": "[steps('esGoalState').monitoring.esAgentSolution]",
+        "enableChangeTracking": "[steps('esGoalState').monitoring.esChangeTracking]",
+        "enableUpdateMgmt": "[steps('esGoalState').monitoring.esUpdateMgmt]",
+        "enableActivityLog": "[steps('esGoalState').monitoring.esActivityLog]",
+        "enableVmInsights": "[steps('esGoalState').monitoring.esVmInsights]",
+        "enableServiceMap": "[steps('esGoalState').monitoring.esServiceMap]",
+        "enableSqlAssessment": "[steps('esGoalState').monitoring.esSqlAssessment]",
         "enterpriseScaleCompanyPrefix": "[steps('lzSettings').esMgmtGroup]",
-        "enableSqlAudit": "[steps('lzGoalState').esSqlAudit]",
-        "enableSqlEncryption": "[steps('lzGoalState').esSqlEncryption]",
-        "enableVmBackup": "[steps('lzGoalState').esAzBackup]",
-        "enableLzDdoS": "[steps('lzGoalState').esLzDdoS]",
-        "denyPublicEndpoints": "[steps('lzGoalState').esLzPrivateLink]",
-        "enableEncryptionInTransit": "[steps('lzGoalState').esEncryptionInTransit]",
-        "enableAksPolicy": "[steps('lzGoalState').esAksPolicy]",
-        "denyAksPrivileged": "[steps('lzGoalState').esAksPriv]",
-        "denyAksPrivilegedEscalation": "[steps('lzGoalState').esAksNoPriv]",
-        "denyHttpIngressForAks": "[steps('lzGoalState').esAksIngress]",
-        "denyRdp": "[steps('lzGoalState').esDenyRdp]",
-        "enableStorageHttps": "[steps('lzGoalState').esHttpsStorage]",
-        "denyIpForwarding": "[steps('lzGoalState').esIpForwarding]",
-        "denySubnetWithoutNsg": "[steps('lzGoalState').esNsg]",
+        "enableSqlAudit": "[steps('lzGoalState').sectionLzPolicies.esSqlAudit]",
+        "enableSqlEncryption": "[steps('lzGoalState').sectionLzPolicies.esSqlEncryption]",
+        "enableVmBackup": "[steps('lzGoalState').sectionLzPolicies.esAzBackup]",
+        "enableLzDdoS": "[steps('lzGoalState').sectionLzPolicies.esLzDdoS]",
+        "denyPublicEndpoints": "[steps('lzGoalState').sectionLzPolicies.esLzPrivateLink]",
+        "enableEncryptionInTransit": "[steps('lzGoalState').sectionLzPolicies.esEncryptionInTransit]",
+        "enableAksPolicy": "[steps('lzGoalState').sectionLzPolicies.esAksPolicy]",
+        "denyAksPrivileged": "[steps('lzGoalState').sectionLzPolicies.esAksPriv]",
+        "denyAksPrivilegedEscalation": "[steps('lzGoalState').sectionLzPolicies.esAksNoPriv]",
+        "denyHttpIngressForAks": "[steps('lzGoalState').sectionLzPolicies.esAksIngress]",
+        "denyRdp": "[steps('lzGoalState').sectionLzPolicies.esDenyRdp]",
+        "enableStorageHttps": "[steps('lzGoalState').sectionLzPolicies.esHttpsStorage]",
+        "denyIpForwarding": "[steps('lzGoalState').sectionLzPolicies.esIpForwarding]",
+        "denySubnetWithoutNsg": "[steps('lzGoalState').sectionLzPolicies.esNsg]",
         "retentionInDays": "[string(steps('esGoalState').esLogRetention)]",
-        "enableVmMonitoring": "[steps('lzGoalState').esVmMonitoring]",
-        "enableVmssMonitoring": "[steps('lzGoalState').esVmssMonitoring]",
-        "enableArcMonitoring": "[steps('lzGoalState').esArcVmMonitoring]",
+        "enableVmMonitoring": "[steps('lzGoalState').sectionLzPolicies.esVmMonitoring]",
+        "enableVmssMonitoring": "[steps('lzGoalState').sectionLzPolicies.esVmssMonitoring]",
+        "enableArcMonitoring": "[steps('lzGoalState').sectionLzPolicies.esArcVmMonitoring]",
         "vpnOrErZones": "[steps('esConnectivityGoalState').esGwOrErAz]",
         "firewallZones": "[steps('esConnectivityGoalState').esFwAz]",
         "corpConnectedLzSubscriptionId": "[if(or(not(contains(steps('lzGoalState').esCorpLzSub, steps('esGoalState').esMgmtSub)), not(contains(steps('lzGoalState').esCorpLzSub, steps('esConnectivityGoalState').esConnectivitySub))), steps('lzGoalState').lzConnectedSubs, '')]",
-        "paToken": "[steps('lzDevOps').esPaToken]",
+        "paToken": "[steps('lzDevOps').sectionCiCdCredentials.esPaToken]",
         "principalId": "[steps('lzDevOps').spnSection.esServicePrincipal.objectId]",
         "principalSecret": "[steps('lzDevOps').spnSection.esServicePrincipal.password]",
-        "gitHubUserNameOrOrg": "[steps('lzDevOps').esGit]",
+        "gitHubUserNameOrOrg": "[steps('lzDevOps').sectionCiCdCredentials.esGit]",
         "appId": "[steps('lzDevOps').spnSection.esServicePrincipal.appId]",
         "enableAzOps": "[steps('lzDevOps').cicdOption]",
         "subscriptionId": "[steps('esGoalState').esMgmtSub]",
-        "repositoryName": "[steps('lzDevOps').esGitRepoName]"
+        "repositoryName": "[steps('lzDevOps').sectionCiCdCredentials.esGitRepoName]"
       },
       "kind": "Tenant",
       "location": "[steps('basics').resourceScope.location.name]"
