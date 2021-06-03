@@ -3,7 +3,7 @@
   "view": {
     "kind": "Form",
     "properties": {
-      "title": "Enterprise-Scale Landing Zones",
+      "title": "HubSpoke Landing Zones",
       "steps": [
         {
           "name": "basics",
@@ -89,7 +89,7 @@
               "name": "esLogRetention",
               "type": "Microsoft.Common.Slider",
               "min": 15,
-              "max": 730,
+              "max": 365,
               "label": "Log Analytics Data Retention (days)",
               "subLabel": "Days",
               "defaultValue": 30,
