@@ -3,7 +3,7 @@
   "view": {
     "kind": "Form",
     "properties": {
-      "title": "HubSpoke Landing Zones",
+      "title": "HubSpoke Landing Zone",
       "steps": [
         {
           "name": "basics",
@@ -271,7 +271,16 @@
                 }
               ],
               "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]"
-            },
+            }
+          ]
+        },
+        {
+          "name": "lzSecurity",
+          "label": "Security",
+          "subLabel": {},
+          "bladeTitle": "lz Security",
+          "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]",
+          "elements": [
             {
               "name": "security",
               "type": "Microsoft.Common.Section",
@@ -302,10 +311,10 @@
                   "type": "Microsoft.Common.TextBox",
                   "label": "Azure Security Center Email Contact",
                   "toolTip": "Email address to get email notifications from Azure Security Center",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "defaultValue": "",
                   "constraints": {
-                    "required": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                    "required": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                     "regex": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
                     "validationMessage": "Please provide a valid email address"
                   }
@@ -316,7 +325,7 @@
                   "label": "Enable Azure Defender for servers",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for all servers.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -336,7 +345,7 @@
                   "label": "Enable Azure Defender for AppServices",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for AppServices.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -356,7 +365,7 @@
                   "label": "Enable Azure Defender for Storage",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Storage.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -376,7 +385,7 @@
                   "label": "Enable Azure Defender for Azure SQL Database",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Azure SQL Database.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -396,7 +405,7 @@
                   "label": "Enable Azure Defender for SQL servers on machines",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for SQL servers on machines.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -416,7 +425,7 @@
                   "label": "Enable Azure Defender for Key Vault",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Key Vault.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -436,7 +445,7 @@
                   "label": "Enable Azure Defender for Azure Resource Manager",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Resource Manager.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -456,7 +465,7 @@
                   "label": "Enable Azure Defender for DNS",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for DNS.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -476,7 +485,7 @@
                   "label": "Enable Azure Defender for Kubernetes",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Kubernetes.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -496,7 +505,7 @@
                   "label": "Enable Azure Defender for Container registries",
                   "defaultValue": "Yes",
                   "toolTip": "If 'Yes' is selected, Azure Defender will be enabled for Container registries.",
-                  "visible": "[equals(steps('esGoalState').security.esAsc, 'Yes')]",
+                  "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]",
                   "constraints": {
                     "allowedValues": [
                       {
@@ -1651,18 +1660,18 @@
         "denySubnetWithoutNsgForIdentity": "[steps('esIdentityGoalState').esIdDenySubnetNsg]",
         "denyPipForIdentity": "[steps('esIdentityGoalState').esIdDenyPublicIp]",
         "enableVmBackupForIdentity": "[steps('esIdentityGoalState').esIdAzBackup]",
-        "enableAsc": "[steps('esGoalState').security.esAsc]",
-        "emailContactAsc": "[steps('esGoalState').security.esAscEmail]",
-        "enableAscForServers": "[steps('esGoalState').security.esAscVms]",
-        "enableAscForAppServices": "[steps('esGoalState').security.esAscApps]",
-        "enableAscForStorage": "[steps('esGoalState').security.esAscStorage]",
-        "enableAscForSql": "[steps('esGoalState').security.esAscSql]",
-        "enableAscForSqlOnVm": "[steps('esGoalState').security.esAscSqlOnVm]",
-        "enableAscForKeyVault": "[steps('esGoalState').security.esAscKeyVault]",
-        "enableAscForArm": "[steps('esGoalState').security.esAscArm]",
-        "enableAscForDns": "[steps('esGoalState').security.esAscDns]",
-        "enableAscForKubernetes": "[steps('esGoalState').security.esAscKubernetes]",
-        "enableAscForRegistries": "[steps('esGoalState').security.esAscRegistries]",
+        "enableAsc": "[steps('lzSecurity').security.esAsc]",
+        "emailContactAsc": "[steps('lzSecurity').security.esAscEmail]",
+        "enableAscForServers": "[steps('lzSecurity').security.esAscVms]",
+        "enableAscForAppServices": "[steps('lzSecurity').security.esAscApps]",
+        "enableAscForStorage": "[steps('lzSecurity').security.esAscStorage]",
+        "enableAscForSql": "[steps('lzSecurity').security.esAscSql]",
+        "enableAscForSqlOnVm": "[steps('lzSecurity').security.esAscSqlOnVm]",
+        "enableAscForKeyVault": "[steps('lzSecurity').security.esAscKeyVault]",
+        "enableAscForArm": "[steps('lzSecurity').security.esAscArm]",
+        "enableAscForDns": "[steps('lzSecurity').security.esAscDns]",
+        "enableAscForKubernetes": "[steps('lzSecurity').security.esAscKubernetes]",
+        "enableAscForRegistries": "[steps('lzSecurity').security.esAscRegistries]",
         "enableSecuritySolution": "[steps('esGoalState').security.esSecuritySolution]",
         "enableAgentHealth": "[steps('esGoalState').monitoring.esAgentSolution]",
         "enableChangeTracking": "[steps('esGoalState').monitoring.esChangeTracking]",
