@@ -605,11 +605,11 @@
     "identityMoveSubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-identity', '/', parameters('identitySubscriptionId'))]",
     "noIdentitySubscription": "[concat(parameters('enterpriseScaleCompanyPrefix'), '-identity', '/', 'naid')]",
     "deploymentNames": {
-      "mgmtGroupDeploymentName": "[take(concat('Enterprise-Mgs', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
+      "mgmtGroupDeploymentName": "[take(concat('Enterprise-MgmtGrp', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "policyDeploymentName": "[take(concat('Enterprise-Policy', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "monitoringDeploymentName": "[take(concat('Enterprise-Monitoring', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "monitoringSolutionsDeploymentName": "[take(concat('Enterprise-Solutions', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
-      "diagAndSecDeploymentName": "[take(concat('Enterprise-DiagSec', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
+      "diagAndSecDeploymentName": "[take(concat('Enterprise-DiagSecurity', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "connectivityDeploymentName": "[take(concat('Enterprise-Networking', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "lzDeploymentName": "[take(concat('Enterprise-LZ', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",
       "identityDeploymentName": "[take(concat('Enterprise-Identity', '-', deployment().location, guid(parameters('enterpriseScaleCompanyPrefix'))), 64)]",

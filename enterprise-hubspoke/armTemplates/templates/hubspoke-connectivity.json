@@ -199,6 +199,7 @@
     },
     "resources": [
         {
+            // Conditionally assignment of policy to enable DdoS (Existing Azure DDoS policy)
             "condition": "[and(equals(parameters('enableDdoS'), 'Yes'), equals(parameters('enableHub'), 'Yes'))]",
             "type": "Microsoft.Authorization/policyAssignments",
             "apiVersion": "2019-09-01",
@@ -222,6 +223,7 @@
             }
         },
         {
+            // Conditionally assignment of role defination to Enable DDoS policy
             "condition": "[and(equals(parameters('enableDdoS'), 'Yes'), equals(parameters('enableHub'), 'Yes'))]",
             "type": "Microsoft.Authorization/roleAssignments",
             "apiVersion": "2019-04-01-preview",

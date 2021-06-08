@@ -199,6 +199,7 @@
   },
   "resources": [
     {
+      //Conditionally assign Enable-DDoS-VNET policy
       "condition": "[and(equals(parameters('enableLzDdoS'), 'Yes'), not(empty(parameters('connectivitySubscriptionId'))))]",
       "type": "Microsoft.Authorization/policyAssignments",
       "apiVersion": "2018-05-01",
@@ -222,6 +223,7 @@
       }
     },
     {
+      // Conditionally assign roleAssignment for the policy that will enforce Enable-DDoS-VNET policy
       "condition": "[and(equals(parameters('enableLzDdoS'), 'Yes'), not(empty(parameters('connectivitySubscriptionId'))))]",
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2019-04-01-preview",
@@ -236,6 +238,7 @@
       }
     },
     {
+      // Conditionally assign Deny-PublicEndpoints policy
       "condition": "[equals(parameters('denyPublicEndpoints'), 'Yes')]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
@@ -259,6 +262,7 @@
       }
     },
     {
+      // Conditionally assign enableEncryptionInTransit policy
       "condition": "[equals(parameters('enableEncryptionInTransit'), 'Yes')]",
       "type": "Microsoft.Authorization/policyAssignments",
       "apiVersion": "2019-09-01",
@@ -275,6 +279,7 @@
       }
     },
     {
+      // Conditionally assign roleAssignment for the policy that will enableEncryptionInTransit policy
       "condition": "[equals(parameters('enableEncryptionInTransit'), 'Yes')]",
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2019-04-01-preview",
@@ -302,7 +307,7 @@
       }
     },
     {
-      // Conditionally assing policy to enforce VM backup
+      // Conditionally assign policy to enforce VM backup
       "condition": "[equals(parameters('enableVmBackup'), 'Yes')]",
       "type": "Microsoft.Authorization/policyAssignments",
       "apiVersion": "2018-05-01",

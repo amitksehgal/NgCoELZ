@@ -46,7 +46,8 @@
         "patSecretName": "PATSecret",
         "spnSecretName": "SPNSecret",
         "userManagedIdentityName": "[concat(resourceGroup().name, '-umi')]",
-        "keyVaultAdminRbac": "/providers/Microsoft.Authorization/roleDefinitions/00482a5a-887f-4fb3-b363-3b7fe8e74483"
+        "keyVaultAdminRbac": "/providers/Microsoft.Authorization/roleDefinitions/00482a5a-887f-4fb3-b363-3b7fe8e74483",
+        "azOpsSetupScript": "[uri(deployment().properties.templateLink.uri, '../../scripts/azopssetup.ps1')]"
     },
     "resources": [
         {
@@ -132,6 +133,7 @@
             ],
             "properties": {
                 "primaryScriptUri": "[base64ToString('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2tybmVzZS9ucy9tYXN0ZXIvdW1pQXpPcHNTZXR1cC5wczE=')]",
+                //"primaryScriptUri": "[variables('azOpsSetupScript')]",
                 "arguments": "[concat('-KeyVault', ' ', variables('keyVaultName'), ' ',
                                       '-NewRepositoryName', ' ', parameters('repositoryName'), ' ',
                                       '-GitHubUserNameOrOrg', ' ', parameters('gitHubUserNameOrOrg'), ' ', 
