@@ -724,7 +724,7 @@
       "condition": "[not(empty(parameters('corpConnectedLzSubscriptionId')))]",
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
-      "name": "[if(not(empty(parameters('corpConnectedLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-corp', '/', parameters('corpConnectedLzSubscriptionId')[copyIndex()].subs), variables('noCorpConnectedLzSubscription'))]",
+      "name": "[if(not(empty(parameters('corpConnectedLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-corporate', '/', parameters('corpConnectedLzSubscriptionId')[copyIndex()].subs), variables('noCorpConnectedLzSubscription'))]",
       "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
       "copy": {
         "name": "connectedCorpLzMove",
@@ -1098,7 +1098,7 @@
       "condition": "[and(not(empty(parameters('corpConnectedLzSubscriptionId'))),equals(parameters('enableHub'), 'Yes'))]",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-05-01",
-      "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-corp')]",
+      "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-corporate')]",
       "name": "[variables('deploymentNames').corpConnectedDeploymentName]",
       "dependsOn": [
         "[variables('deploymentNames').connectivityDeploymentName]",
