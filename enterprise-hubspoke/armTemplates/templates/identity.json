@@ -56,7 +56,7 @@
       "denyPip": "Deny-Public-IP",
       "deployVmBackup": "Deploy-VM-Backup"
     },
-    "rbacOwner": "c2a543f1-6b97-4ade-a555-ccc7c0d6f051",
+    "rbacOwner": "8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
     "roleAssignmentNames": {
       "deployVmBackup": "[guid(concat(parameters('toplevelManagementGroupPrefix'), 'identity', variables('policyAssignmentNames').deployVmBackup))]"
     }
