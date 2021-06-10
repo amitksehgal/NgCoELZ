@@ -472,6 +472,13 @@
         "description": "Provide subnet for VPN/ER."
       }
     },
+    "vpnGwType": {
+      "type": "string",
+      "defaultValue": "RouteBased",
+      "metadata": {
+        "description": "VPN Gateway type."
+      }
+    },    
     "gwRegionalOrAz": {
       "type": "string",
       "defaultValue": "Zone",
@@ -1090,6 +1097,9 @@
           },
           "erRegionalSku": {
             "value": "[parameters('erRegionalSku')]"
+          },
+          "vpnGwType": {
+            "value": "[parameters('vpnGwType')]"
           }
         }
       }

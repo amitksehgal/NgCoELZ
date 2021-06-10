@@ -138,6 +138,10 @@
         "erRegionalSku": {
             "type": "string",
             "defaultValue": ""
+        },
+        "vpnGwType": {
+            "type": "string",
+            "defaultValue": "RouteBased"
         }
     },
     "variables": {
@@ -223,7 +227,7 @@
             }
         },
         {
-            // Conditionally assignment of role defination to Enable DDoS policy
+            // Conditionally assignment role defination to Enable DDoS policy
             "condition": "[and(equals(parameters('enableDdoS'), 'Yes'), equals(parameters('enableHub'), 'Yes'))]",
             "type": "Microsoft.Authorization/roleAssignments",
             "apiVersion": "2019-04-01-preview",
@@ -378,7 +382,7 @@
                                             "properties": {
                                                 "gatewayType": "Vpn",
                                                 "vpnGatewayGeneration": "Generation2",
-                                                "vpnType": "RouteBased",
+                                                "vpnType": "[parameters('vpnGwType')]",
                                                 "ipConfigurations": [
                                                     {
                                                         "name": "default",
@@ -394,24 +398,27 @@
                                                     }
                                                 ],
                                                 "sku": {
-                                                    "name": "[if(
-                                                                 and(
-                                                                     or(
-                                                                         empty(parameters('gwRegionalSku')), 
-                                                                         empty(parameters('gwAzSku'))), 
-                                                                         not(
-                                                                             empty(parameters('gwRegionalSku')))), 
-                                                                                parameters('gwRegionalSku'), 
-                                                                                parameters('gwAzSku'))]",
-                                                    "tier": "[if(
-                                                                and(
-                                                                    or(
-                                                                        empty(parameters('gwRegionalSku')), 
-                                                                        empty(parameters('gwAzSku'))), 
-                                                                        not(
-                                                                            empty(parameters('gwRegionalSku')))), 
-                                                                                parameters('gwRegionalSku'), 
-                                                                                parameters('gwAzSku'))]"
+                                                //    "name": "[if(
+                                                //                 and(
+                                                //                     or(
+                                                //                         empty(parameters('gwRegionalSku')), 
+                                                //                         empty(parameters('gwAzSku'))), 
+                                                //                         not(
+                                                //                             empty(parameters('gwRegionalSku')))), 
+                                                //                                parameters('gwRegionalSku'), 
+                                                //                                parameters('gwAzSku'))]",
+                                                //    "tier": "[if(
+                                                //                and(
+                                                //                    or(
+                                                //                        empty(parameters('gwRegionalSku')), 
+                                                //                        empty(parameters('gwAzSku'))), 
+                                                //                        not(
+                                                //                           empty(parameters('gwRegionalSku')))), 
+                                                //                                parameters('gwRegionalSku'), 
+                                                //                                parameters('gwAzSku'))]"
+                                                
+                                                    "name": "Basic", //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
+                                                    "tier": "Basic"  //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
                                                 }
                                             }
                                         },
