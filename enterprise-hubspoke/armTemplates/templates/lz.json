@@ -275,7 +275,8 @@
         "description": "[variables('policyAssignmentNames').deployEncryptionInTransit]",
         "displayName": "[variables('policyAssignmentNames').deployEncryptionInTransit]",
         "policyDefinitionId": "[variables('policyDefinitions').deployEncryptionInTransit]",
-        "parameters": {}
+        "parameters": {},
+        "scope": "[variables('scope')]"
       }
     },
     {
