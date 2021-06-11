@@ -268,7 +268,7 @@
         "label": "Security",
         "subLabel": {},
         "bladeTitle": "lz Security",
-        "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]",
+        "visible": true,
         "elements": [
           {
             "name": "security",
@@ -293,7 +293,7 @@
                     }
                   ]
                 },
-                "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]"
+                "visible": true
               },
               {
                 "name": "esAscEmail",
@@ -526,7 +526,7 @@
                     }
                   ]
                 },
-                "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]"
+                "visible": "[equals(steps('lzSecurity').security.esAsc, 'Yes')]"
               }
             ],
             "visible": "[equals(steps('esGoalState').esLogAnalytics, 'Yes')]"
