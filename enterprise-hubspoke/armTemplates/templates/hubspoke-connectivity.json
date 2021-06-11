@@ -416,9 +416,9 @@
                                                 //                           empty(parameters('gwRegionalSku')))), 
                                                 //                                parameters('gwRegionalSku'), 
                                                 //                                parameters('gwAzSku'))]"
-                                                
-                                                    "name": "Basic", //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
-                                                    "tier": "Basic"  //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
+
+                                                    "name": "VpnGw1", //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
+                                                    "tier": "VpnGw1"  //Allowed values: "Basic","VpnGw1","VpnGw2","VpnGw3"
                                                 }
                                             }
                                         },
