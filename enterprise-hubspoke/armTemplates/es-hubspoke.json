@@ -707,7 +707,7 @@
       "condition": "[not(empty(parameters('nonCorpLzSubscriptionId')))]",
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
-      "name": "[if(not(empty(parameters('nonCorpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-noncorporate', '/', parameters('nonCorpLzSubscriptionId')[copyIndex()]), variables('noNonCorpLzSubscription'))]",
+      "name": "[if(not(empty(parameters('nonCorpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-non-corporate', '/', parameters('nonCorpLzSubscriptionId')[copyIndex()]), variables('noNonCorpLzSubscription'))]",
       "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
       "copy": {
         "name": "nonCorpLzMove",
