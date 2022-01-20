@@ -36,7 +36,7 @@
     "denySubnetWithoutNsgForIdentity": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether policy to deny subnet without NSG should be assigned or not."
       }
@@ -44,7 +44,7 @@
     "denyRdpForIdentity": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether policy to deny inbound RDP should be assigned or not."
       }
@@ -52,7 +52,7 @@
     "denyPipForIdentity": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether policy to deny puplic IP should be assigned or not."
       }
@@ -60,7 +60,7 @@
     "enableVmBackupForIdentity": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether policy to enable VM backup should be assigned or not."
       }
@@ -89,7 +89,7 @@
     "enableLogAnalytics": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "If 'Yes' is selected when also adding a subscription for management, ARM will assign two policies to enable auditing in your environment, into the Log Analytics workspace for platform monitoring. If 'No', it will be ignored."
       }
@@ -104,7 +104,7 @@
     "enableAsc": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "If 'Yes' is selected when also adding a subscription for management, ARM will assign two policies to enable auditing in your environment, into the Log Analytics workspace for platform monitoring. If 'No', it will be ignored."
       }
@@ -112,7 +112,7 @@
     "enableAksPolicy": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether AKS policy should be assigned or not."
       }
@@ -127,7 +127,7 @@
     "enableAscForServers": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for Virtual Machines"
       }
@@ -135,7 +135,7 @@
     "enableAscForAppServices": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for App Services"
       }
@@ -143,7 +143,7 @@
     "enableAscForStorage": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for Storage Accounts"
       }
@@ -151,7 +151,7 @@
     "enableAscForSql": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for Azure SQL Databases"
       }
@@ -159,7 +159,7 @@
     "enableAscForSqlOnVm": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for Azure SQL on VMs"
       }
@@ -167,7 +167,7 @@
     "enableAscForKeyVault": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for Azure Key Vault"
       }
@@ -175,7 +175,7 @@
     "enableAscForArm": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for ARM"
       }
@@ -183,7 +183,7 @@
     "enableAscForDns": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for DNS"
       }
@@ -191,7 +191,7 @@
     "enableAscForKubernetes": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for AKS"
       }
@@ -199,7 +199,7 @@
     "enableAscForRegistries": {
       "type": "string",
       "defaultValue": "Free",
-      "allowedValues": ["Standard", "Free"],
+      "allowedValues": [ "Standard", "Free" ],
       "metadata": {
         "description": "Azure Defender pricing tier for ACR"
       }
@@ -207,7 +207,7 @@
     "denyAksPrivileged": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether AKS privileged policy should be assigned or not."
       }
@@ -215,7 +215,7 @@
     "denyAksPrivilegedEscalation": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether AKS escalation policy should be assigned or not."
       }
@@ -223,7 +223,7 @@
     "denyHttpIngressForAks": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether ingess policy for AKS should be assigned or not."
       }
@@ -231,7 +231,7 @@
     "enableArcMonitoring": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "If 'Yes' is selected, policy will be assigned to enforce Arc monitoring."
       }
@@ -239,7 +239,7 @@
     "enableVmMonitoring": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "If 'Yes' is selected, policy will be assigned to enforce VM monitoring."
       }
@@ -247,7 +247,7 @@
     "enableVmssMonitoring": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "If 'Yes' is selected, policy will be assigned to enforce VMSS monitoring."
       }
@@ -255,7 +255,7 @@
     "enableSecuritySolution": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether security solutions should be enabled or not."
       }
@@ -263,7 +263,7 @@
     "enableEncryptionInTransit": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select if encryption in transit policy should be assigned or not."
       }
@@ -271,7 +271,7 @@
     "enableAgentHealth": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether agent health solution should be enabled or not."
       }
@@ -279,7 +279,7 @@
     "enableChangeTracking": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether change tracking solution should be enabled or not."
       }
@@ -287,7 +287,7 @@
     "enableUpdateMgmt": {
       "type": "string",
       "defaultValue": "Yes",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether update mgmanagement solution should be enabled or not."
       }
@@ -295,7 +295,7 @@
     "enableActivityLog": {
       "type": "string",
       "defaultValue": "Yes",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether activity log solution should be enabled or not."
       }
@@ -303,7 +303,7 @@
     "enableVmInsights": {
       "type": "string",
       "defaultValue": "Yes",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether VM insights solution should be enabled or not."
       }
@@ -311,7 +311,7 @@
     "enableServiceMap": {
       "type": "string",
       "defaultValue": "Yes",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether service map solution should be enabled or not."
       }
@@ -319,7 +319,7 @@
     "enableSqlAssessment": {
       "type": "string",
       "defaultValue": "Yes",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether sql assessment solution should be enabled or not."
       }
@@ -327,7 +327,7 @@
     "enableSqlAudit": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether SQL audit policy should be assigned or not."
       }
@@ -335,7 +335,7 @@
     "enableSqlEncryption": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether SQL encryption policy should be assigned or not."
       }
@@ -343,7 +343,7 @@
     "enableVmBackup": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether VM backup policy should be assigned or not."
       }
@@ -351,7 +351,7 @@
     "denyRdp": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether RDP policy should be assigned or not."
       }
@@ -359,7 +359,7 @@
     "denyPublicEndpoints": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select if policy to deny public endpoint should be assigned or not."
       }
@@ -367,7 +367,7 @@
     "enableStorageHttps": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether storage HTTPS policy should be assigned or not."
       }
@@ -375,7 +375,7 @@
     "enableLzDdoS": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether DDoS Protection standard should be enabled or not."
       }
@@ -383,14 +383,14 @@
     "denyIpForwarding": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether IP forwarding policy should be assigned or not."
       }
     },
     "denySubnetWithoutNsg": {
       "type": "string",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "defaultValue": "No",
       "metadata": {
         "description": "Select whether subnet with NSG policy should be assigned or not."
@@ -406,7 +406,7 @@
     "enableVpnGw": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether the VPN Gateway should be deployed or not."
       }
@@ -414,7 +414,7 @@
     "enableErGw": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether the ExpressRoute Gateway should be deployed or not."
       }
@@ -428,7 +428,7 @@
     },
     "enableHub": {
       "type": "string",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "defaultValue": "No",
       "metadata": {
         "description": "Select whether the virtual network hub should be deployed or not."
@@ -436,7 +436,7 @@
     },
     "enableAzFw": {
       "type": "string",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "defaultValue": "No",
       "metadata": {
         "description": "Select whether the Azure Firewall should be deployed or not."
@@ -445,7 +445,7 @@
     "enableAzFwDnsProxy": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether the Azure Firewall should be used as DNS Proxy or not."
       }
@@ -453,7 +453,7 @@
     "enableDdoS": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": "Select whether the DDoS Standard protection plan should be enabled or not."
       }
@@ -478,7 +478,7 @@
       "metadata": {
         "description": "VPN Gateway type."
       }
-    },    
+    },
     "gwRegionalOrAz": {
       "type": "string",
       "defaultValue": "Zone",
@@ -573,7 +573,7 @@
     "enableAzOps": {
       "type": "string",
       "defaultValue": "No",
-      "allowedValues": ["Yes", "No"],
+      "allowedValues": [ "Yes", "No" ],
       "metadata": {
         "description": ""
       }
@@ -649,7 +649,7 @@
       "name": "[variables('deploymentNames').policyDeploymentName]",
       "location": "[deployment().location]",
       "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -669,7 +669,7 @@
       "name": "[concat('preparingToLaunch', copyIndex())]",
       "location": "[deployment().location]",
       "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'))]",
-      "dependsOn": ["[variables('deploymentNames').policyDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').policyDeploymentName]" ],
       "copy": {
         "batchSize": 1,
         "count": 20,
@@ -692,7 +692,7 @@
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
       "name": "[if(not(empty(parameters('managementSubscriptionId'))), variables('moveSubscription'), variables('noSubscription'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "properties": {}
     },
     {
@@ -700,15 +700,15 @@
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
       "name": "[if(not(empty(parameters('identitySubscriptionId'))), variables('identityMoveSubscription'), variables('noIdentitySubscription'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "properties": {}
     },
     {
       "condition": "[not(empty(parameters('nonCorpLzSubscriptionId')))]",
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
-      "name": "[if(not(empty(parameters('nonCorpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-non-corporate', '/', parameters('nonCorpLzSubscriptionId')[copyIndex()]), variables('noNonCorpLzSubscription'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "name": "[if(not(empty(parameters('nonCorpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-noncorporate', '/', parameters('nonCorpLzSubscriptionId')[copyIndex()]), variables('noNonCorpLzSubscription'))]",
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "copy": {
         "name": "nonCorpLzMove",
         "count": "[length(parameters('nonCorpLzSubscriptionId'))]"
@@ -720,7 +720,7 @@
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
       "name": "[if(not(empty(parameters('corpLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-corporate', '/', parameters('corpLzSubscriptionId')[copyIndex()]), variables('noCorpLzSubscription'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "copy": {
         "name": "corpLzMove",
         "count": "[length(parameters('corpLzSubscriptionId'))]"
@@ -732,12 +732,26 @@
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "apiVersion": "2020-05-01",
       "name": "[if(not(empty(parameters('corpConnectedLzSubscriptionId'))), concat(parameters('enterpriseScaleCompanyPrefix'), '-corporate', '/', parameters('corpConnectedLzSubscriptionId')[copyIndex()].subs), variables('noCorpConnectedLzSubscription'))]",
-      "dependsOn": ["[variables('deploymentNames').mgmtGroupDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').mgmtGroupDeploymentName]" ],
       "copy": {
         "name": "connectedCorpLzMove",
         "count": "[length(parameters('corpConnectedLzSubscriptionId'))]"
       },
       "properties": {}
+    },
+    {
+      "type": "Microsoft.Resources/deploymentScripts",
+      "apiVersion": "2020-10-01",
+      "kind": "AzurePowerShell",
+      "name": "WaitSection",
+      "location": "[deployment().location]",
+      "properties": {
+        "mode": "Incremental",
+        "azPowerShellVersion": "3.0",
+        "scriptContent": "start-sleep -Seconds 480",
+        "cleanupPreference": "Always",
+        "retentionInterval": "PT1H"
+      }
     },
     {
       "condition": "[and(not(empty(parameters('managementSubscriptionId'))),equals(parameters('enableLogAnalytics'), 'Yes'))]",
@@ -747,6 +761,7 @@
       "name": "[variables('deploymentNames').monitoringDeploymentName]",
       "dependsOn": [
         "[variables('deploymentNames').policyDeploymentName]",
+        "WaitSection",
         "policyCompletion"
       ],
       "location": "[deployment().location]",
@@ -778,7 +793,7 @@
       "apiVersion": "2019-05-01",
       "subscriptionId": "[parameters('managementSubscriptionId')]",
       "name": "[variables('deploymentNames').monitoringSolutionsDeploymentName]",
-      "dependsOn": ["[variables('deploymentNames').monitoringDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').monitoringDeploymentName]" ],
       "location": "[deployment().location]",
       "properties": {
         "mode": "Incremental",
@@ -828,6 +843,7 @@
       "name": "[variables('deploymentNames').identityDeploymentName]",
       "dependsOn": [
         "[variables('deploymentNames').policyDeploymentName]",
+        "WaitSection",
         "policyCompletion"
       ],
       "location": "[deployment().location]",
@@ -864,6 +880,7 @@
       "name": "[variables('deploymentNames').lzDeploymentName]",
       "dependsOn": [
         "[variables('deploymentNames').policyDeploymentName]",
+        "WaitSection",
         "policyCompletion"
       ],
       "location": "[deployment().location]",
@@ -934,7 +951,7 @@
       "apiVersion": "2019-05-01",
       "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'))]",
       "name": "[variables('deploymentNames').diagAndSecDeploymentName]",
-      "dependsOn": ["[variables('deploymentNames').monitoringDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').monitoringDeploymentName]" ],
       "location": "[deployment().location]",
       "properties": {
         "mode": "Incremental",
@@ -1022,6 +1039,7 @@
       "name": "[if(not(empty(parameters('connectivitySubscriptionId'))), variables('connectivityMoveSubscription'), variables('noConnectivitySubscription'))]",
       "dependsOn": [
         "[variables('deploymentNames').policyDeploymentName]",
+        "WaitSection",
         "policyCompletion"
       ],
       "properties": {}
@@ -1032,7 +1050,7 @@
       "apiVersion": "2019-05-01",
       "scope": "[concat('Microsoft.Management/managementGroups/', parameters('enterpriseScaleCompanyPrefix'), '-connectivity')]",
       "name": "[variables('deploymentNames').connectivityDeploymentName]",
-      "dependsOn": ["[variables('deploymentNames').diagAndSecDeploymentName]"],
+      "dependsOn": [ "[variables('deploymentNames').diagAndSecDeploymentName]" ],
       "location": "[deployment().location]",
       "properties": {
         "mode": "Incremental",
